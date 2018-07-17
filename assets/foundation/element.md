@@ -1,15 +1,15 @@
 # 要素
 
-タグの後に `()` をつけて, 内に書く.
+タグで囲まず書く. また, 閉じタグも省略する.
 
 Pug
 ```html
-a(href="https://google.com" target="blank") Google
-img(src="images/sample.png")
+h1 タイトル
+p ほげほげ
 ```
 
 HTML
 ```html
-<a href="https://google.com" target="blank">Google</a>
-<img src="images/sample.png">
+<h1>タイトル</h1>
+<p>ほげほげ</p>
 ```
