@@ -1,20 +1,20 @@
 # クラスとID
+前項で属性と値の指定の仕方を解説したが, クラスとIDは例外で, クラスの場合は`要素名.クラス名`, IDの場合は`要素名#クラス名`の書式で記述できる.  
+なお, 要素名が`div`の場合は要素名も省略可能である.
 
-`id=""` `class=""`を省略して書ける.  
-タグのすぐ後に、`#id名` `.class名`を付けて利用する.  
-`div` は省略する.
-
-Pug
-```html
+> Pug
+```
 #main
-  h1.title タイトル
-  p.msg ほげほげ
+  h1.title シシトウ
+  p.msg 苦い
 ```
 
-HTML
+これをHTMLに変換すると以下のようになる.
+
+> HTML
 ```html
 <div id="main">
-  <h1 class="title">タイトル</h1>
-  <p class="msg">ほげほげ</p>
+  <h1 class="title">シシトウ</h1>
+  <p class="msg">苦い</p>
 </div>
 ```
