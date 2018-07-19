@@ -24,3 +24,19 @@ html
   body
     h1 はろー！
 ```
+
+HTMLにコンパイルされた後は以下のようなコードが生成される.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>サブタイトル</title>
+    <script src="js/jquery.js">
+    <script src="js/app.js">
+  </head>
+  <body>
+    <h1>はろー！</h1>
+  </body>
+</html>
+```
