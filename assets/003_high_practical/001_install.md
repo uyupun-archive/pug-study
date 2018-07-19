@@ -1,29 +1,33 @@
 # インストール
 
-[Node.js](https://nodejs.org/ja/download/)をインストールする.  
-Node.jsとは, サーバサイドで動くJavaScript.
+初めに, [Node.js](https://nodejs.org/ja/download/) をインストールする.  
+`Node.js` は, サーバサイドで動くJavaScriptである.
 
-> 準備
+`npm` 等をインストールする前にディレクトリを作成する.  
+
 ```bash
 $ mkdir pug-test
 $ cd pug-test
 ```
 
-> npm インストール  
-パッケージ管理システム
+まず最初に, `npm` をインストールする.  
+`npm` は, パッケージ管理システムの1種である. 正式名称は, `Node Package Manager` で `Node.js` のパッケージを管理する.
+
 ```bash
 $ npm init
 $ npm install (npm i)
 ```
 
-> gulp インストール  
-さまざまな作業を自動化するビルドシステム
+次に, `gulp` をインストールする.  
+`gulp` は, `Node.js` をベースとしたビルドシステムヘルパーである. `gulp` を使用すれば, 様々な作業を自動化することができる.
+
 ```bash
 $ npm i gulp --save-dev
 ```
 
-> Pug インストール  
-HTMLが簡単に書ける 
+最後に, `Pug` をインストールする.  
+冒頭でも説明したように, `Pug` は効率的にHTMLを記述するためのテンプレートエンジンだ.  
+
 ```bash
 $ npm i gulp-pug --save-dev
 ```
