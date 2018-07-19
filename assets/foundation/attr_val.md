@@ -12,3 +12,4 @@ HTML
 ```html
 <a href="https://google.com" target="blank">Google</a>
 <img src="images/sample.png">
+```
