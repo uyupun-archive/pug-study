@@ -1,23 +1,22 @@
-# 省略記法
+# ネストの省略記法
+ネストする際に, 要素名の直後に`:`と半角スペースを入れることで, 改行とインデントを省略することができる.  
+２回以上使用することも可能だが, テキストの後に使用することはできない.  
 
-ネストする時, 改行とインデントを省略して記入することができる.  
-タグの後に, スペースを入れ, `:` を入れることでネストすることができる.  
-2回以上, 使用することも可能だが, テキストの後に使用することはできない.  
-`nav` などで使用すると便利.  
-
-Pug
-```html
+> Pug
+```
 ul
-  li: a(href="#") ほげほげ
-  li: a(href="#"): span ぴよぴよ
-  li: a(href="#"): img(src="images/sample.png")
+  li: a(href="#") んにゃぴ
+  li: a(href="#"): span ぷんぽ
+  li: a(href="#"): img(src="img/しげる.jpg")
 ```
 
-HTML
+これをHTMLに変換すると以下のようになる.
+
+> HTML
 ```html
 <ul>
-  <li><a href="#">ほげほげ</a></li>
-  <li><a href="#"><span>ぴよぴよ</span></a></li>
-  <li><a href="#"><img src="images/sample.png"></a></li>
+  <li><a href="#">んにゃぴ</a></li>
+  <li><a href="#"><span>ぷんぽ</span></a></li>
+  <li><a href="#"><img src="img/しげる.jpg"></a></li>
 </ul>
 ```
