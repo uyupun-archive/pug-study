@@ -3,7 +3,7 @@
 
 > Pug
 ```
-a(href='https://agar.io' target='_blank') Agar.io
+a(href='https://oic.ac.jp' target='_blank') OIC
 img(src='img/しげる.jpg')
 ```
 
@@ -11,6 +11,6 @@ img(src='img/しげる.jpg')
 
 > HTML
 ```html
-<a href="https://agar.io" target="_blank">Agar.io</a>
+<a href="https://oic.ac.jp" target="_blank">OIC</a>
 <img src="img/しげる.jpg">
 ```
