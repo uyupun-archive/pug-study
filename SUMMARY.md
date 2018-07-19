@@ -7,9 +7,9 @@
 * [要素](/assets/001_foundation/002_element.md)
 * [ネスト](/assets/001_foundation/003_nest.md)
 * [改行](/assets/001_foundation/004_break.md)
-* [属性, 値](/assets/001_foundation/005_attr_val.md)
-* [クラス, ID](/assets/001_foundation/006_class_id.md)
-* [改行とインデントの省略記法](/assets/001_foundation/007_abbreviation.md)
+* [属性と値](/assets/001_foundation/005_attr_val.md)
+* [クラスとID](/assets/001_foundation/006_class_id.md)
+* [ネストの省略記法](/assets/001_foundation/007_abbreviation.md)
 * [コメント](/assets/001_foundation/008_comment.md)
 
 * [[応用編]]()
