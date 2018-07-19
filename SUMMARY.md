@@ -20,5 +20,5 @@
 * [extends](/assets/practical/extends.md)
 
 * [[実践編]]()
-* [インストール]()
-* [コンパイル]()
+* [インストール](/assets/high_practical/install.md)
+* [コンパイル](/assets/high_practical/compile.md)
