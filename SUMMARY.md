@@ -14,7 +14,7 @@
 
 * [[応用編]]()
 * [変数](/assets/002_practical/001_variable.md)
-* [for, each](/assets/002_practical/002_for_each.md)
+* [ループ](/assets/002_practical/002_loop.md)
 * [include](/assets/002_practical/003_include.md)
 * [extends](/assets/002_practical/004_extends.md)
 
