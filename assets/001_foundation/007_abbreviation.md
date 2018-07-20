@@ -5,9 +5,9 @@
 > Pug
 ```
 ul
-  li: a(href="#") んにゃぴ
-  li: a(href="#"): span ぷんぽ
-  li: a(href="#"): img(src="img/しげる.jpg")
+  li: a(href='#') んにゃぴ
+  li: a(href='#'): span ぷんぽ
+  li: a(href='#'): img(src='img/しげる.jpg')
 ```
 
 これをHTMLに変換すると以下のようになる.
