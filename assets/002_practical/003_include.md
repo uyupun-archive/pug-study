@@ -4,19 +4,16 @@ Pugにおけるincludeという機能は, 共通部分をパーツ化するた�
 
 例として, `common/_head.pug`を`index.pug`からincludeするケースを示す.
 
-common/_head.pug
-
+> Pug: common/_head.pug
 ```
 head
-  title サブタイトル
-  script(src='js/jquery.js')
-  script(src='js/app.js')
+  meta(charset='utf-8')
+  title 世界に挨拶
 ```
 
 呼び出すときは以下のようにする.
 
-index.pug
-
+> Pug: index.pug
 ```
 doctype html
 html
@@ -25,15 +22,15 @@ html
     h1 はろー！
 ```
 
-HTMLにコンパイルされた後は以下のようなコードが生成される.
+これをHTMLに変換すると以下のようになる.
 
+> HTML
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <title>サブタイトル</title>
-    <script src="js/jquery.js">
-    <script src="js/app.js">
+    <meta charset="utf-8">
+    <title>世界に挨拶</title>
   </head>
   <body>
     <h1>はろー！</h1>
