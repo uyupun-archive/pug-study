@@ -1,41 +1,36 @@
 # コンパイル
-
-Pugをコンパイルするために, `gulpfile.js` を作成する.  
-`gulpfile.js` は様々な作業をまとめて処理するためのファイルである.
-
-まず, `touch` コマンドでファイルを作成し, ファイル内にコードを記述する.
+Gulpで実行したいタスクは, `gulpfile.js`に記述する.  
+以下のコマンドで`gulpfile.js`を作成する
 
 ```bash
 $ touch gulpfile.js
-$ vim gulpfile.js
 ```
-Vim は vi から派生し, 発展した高機能なテキストエディタだ.  
-Vim は `i` キーを入力することで挿入モードになり, 文字を打つことができる.  
-また, `esc` キーを入力することでコマンドモード（初期状態）に戻り, `:wq` または `ZZ` で上書き保存し, im を終了することができる.  
 
-> gulpfile.js
->
->```js
->const gulp = require('gulp')
->const pug = require('gulp-pug')
->
->// Pugのコンパイル
->gulp.task('pug', () => {
->  gulp.src([ './assets/pug/*.pug', '!./assets/pug/_*.pug' ])
->      .pipe(pug({ pretty: true }))
->      .pipe(gulp.dest('./public/'))
->})
->
->// Pugの自動コンパイル
->gulp.task('watch', [ 'pug' ], () => {
->  const watcher = gulp.watch('./assets/pug/*.pug', [ 'pug' ])
->  watcher.on('change', event => {})
->})
->```
+次に, お好きなエディタで以下のコードを記述してほしい.  
 
-`!./assets/pug/_*.pug` このコードを記述することで, ファイルの先頭に `_` のあるPugファイルはコンパイルされないようになる.  
+```js
+const gulp = require('gulp')
+const pug = require('gulp-pug')
 
-次に, Pugファイルを作成し, コンパイルする. 
+// Pugのコンパイル
+gulp.task('pug', () => {
+  gulp.src([ './assets/pug/*.pug', '!./assets/pug/_*.pug' ])
+      .pipe(pug({ pretty: true }))
+      .pipe(gulp.dest('./public/'))
+})
+
+// Pugの自動コンパイル
+gulp.task('watch', [ 'pug' ], () => {
+  const watcher = gulp.watch('./assets/pug/*.pug', [ 'pug' ])
+  watcher.on('change', event => {})
+})
+```
+
+細かいNode.jsの文法の解説は省略するが, Gulpでは基本的に`const 変数名 = require('パッケージ名')`で必要なパッケージを読み込み, `gulp.task()`の中にそれぞれのタスクを記述していく.  
+また, `gulp.src([ './assets/pug/*.pug', '!./assets/pug/_*.pug' ])`のうち, `'./assets/pug/*.pug'`はコンパイルするPugファイルの指定, `'!./assets/pug/_*.pug'`はコンパイル対象から除外するPugファイルの指定である.  
+この場合, `'!./assets/pug/_*.pug'`は先頭に`_`のあるファイルを除外していることになる.
+
+次に, Pugファイルを作成し, 実際にコンパイルしてみよう.
 
 ```bash
 $ mkdir -p assets/pug/
@@ -56,7 +51,7 @@ $ cat public/index.html
 $ cd pug-test
 ```
 
-片方のターミナルで, 以下のコマンドを実行し, ファイルの変更を監視する. 
+片方のターミナルで, 以下のコマンドを実行し, ファイルの変更を監視する.
 
 ```
 $ gulp watch
@@ -66,9 +61,9 @@ $ gulp watch
 [03:31:18] Starting 'watch'...
 [03:31:18] Finished 'watch' after 7.62 ms
 ```
- 
-もう片方は, Pugファイルを変更する. 
- 
+
+もう片方は, Pugファイルを変更する.
+
 ```
 $ echo h1 piyopiyo > assets/pug/index.pug
 ```

@@ -1,33 +1,54 @@
 # インストール
+この章では実際にPugを用いた小規模なプロジェクトを構築する.  
+それに先立って必要なツールをインストールする.
 
-初めに, [Node.js](https://nodejs.org/ja/download/) をインストールする.  
-Node.js は, サーバサイドで動くJavaScriptである.
+### Node.jsとnpm
+初めに, https://nodejs.org/ja/download/ からNode.jsをインストールする.  
+Node.jsとは, 一言で説明するとサーバサイドで動作するJavaScriptである.
 
-npm 等をインストールする前にディレクトリを作成する.  
+Node.jsのインストールに成功した場合, 以下のようなコマンドを入力すると,
+
+```bash
+$ node -v
+v8.9.1
+```
+
+のようにバージョンが表示される筈である.
+
+また, Node.jsをインストールすると同時にNode.jsのパッケージ管理システムであるnpm(Node Package Manager)もインストールされる.  
+npmが正常にインストールされているかは, 以下のコマンドで確認する.
+
+```bash
+$ npm -v
+5.6.0
+```
+
+# プロジェクトの作成
+まずはディレクトリを作成し, 作成したディレクトリに移動する.
 
 ```bash
 $ mkdir pug-test
 $ cd pug-test
 ```
 
-まず最初に, npm をインストールする.  
-npm は, パッケージ管理システムの1種である. 正式名称は, Node Package Manager で Node.js のパッケージを管理する.
+次に, `package.json`を生成する.  
+`package.json`はnpmでインストールしたいパッケージなどを記述しておくためのファイルである.  
+`package.json`の雛形は以下のコマンドで生成できる.
 
 ```bash
 $ npm init
-$ npm install (npm i)
 ```
 
-次に, Gulp をインストールする.  
-Gulp は, Node.js をベースとしたビルドシステムヘルパーである. Gulp を使用すれば, 様々な作業を自動化することができる.
+次に, Gulpをインストールする.  
+Gulpは, Node.jsで動作するタスクランナーである.  
+要するに, 面倒な作業を自動化できるツールである.
 
 ```bash
-$ npm i gulp --save-dev
+$ npm install gulp --save-dev
 ```
 
-最後に, Pug をインストールする.  
-冒頭でも説明したように, Pug は効率的に HTML を記述するためのテンプレートエンジンだ.  
+最後に, gulp-pugをインストールする.  
 
 ```bash
-$ npm i gulp-pug --save-dev
+$ npm install gulp-pug --save-dev
 ```
