@@ -1,33 +1,24 @@
 # インストール
+この章では実際にPugを用いた小規模なプロジェクトを構築する.  
+それに先立って必要なツールをインストールする.
 
-初めに, [Node.js](https://nodejs.org/ja/download/) をインストールする.  
-Node.js は, サーバサイドで動くJavaScriptである.
+### Node.jsとnpm
+初めに, https://nodejs.org/ja/download/ からNode.jsをインストールする.  
+Node.jsとは, 一言で説明するとサーバサイドで動作するJavaScriptである.
 
-npm 等をインストールする前にディレクトリを作成する.  
+Node.jsのインストールに成功した場合, 以下のようなコマンドを入力すると,
 
 ```bash
-$ mkdir pug-test
-$ cd pug-test
+$ node -v
+v8.9.1
 ```
 
-まず最初に, npm をインストールする.  
-npm は, パッケージ管理システムの1種である. 正式名称は, Node Package Manager で Node.js のパッケージを管理する.
+のようにバージョンが表示される筈である.
+
+また, Node.jsをインストールすると同時にNode.jsのパッケージ管理システムであるnpmもインストールされる.  
+npmが正常にインストールされているかは, 以下のコマンドで確認する.
 
 ```bash
-$ npm init
-$ npm install (npm i)
-```
-
-次に, Gulp をインストールする.  
-Gulp は, Node.js をベースとしたビルドシステムヘルパーである. Gulp を使用すれば, 様々な作業を自動化することができる.
-
-```bash
-$ npm i gulp --save-dev
-```
-
-最後に, Pug をインストールする.  
-冒頭でも説明したように, Pug は効率的に HTML を記述するためのテンプレートエンジンだ.  
-
-```bash
-$ npm i gulp-pug --save-dev
+$ npm -v
+5.6.0
 ```
