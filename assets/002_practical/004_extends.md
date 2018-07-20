@@ -1,10 +1,9 @@
-# Extends
-Pugでは同じようなレイアウトのページを量産する際に便利なExtendsという機能が用意されている.
+# extends
+Pugでは同じようなレイアウトのページを量産する際に便利なextendsという機能が用意されている.
 
 まず, 以下のようにレイアウトのベースになるファイルを作成する.
 
-_layouts.pug
-
+> Pug: common/_layouts.pug
 ```
 doctype html
 html
@@ -15,28 +14,52 @@ html
     block content
 ```
 
-ファイルごとに違うコンテンツを入れたい部分は`block 名前`で囲っておく.
+ファイルごとに違うコンテンツを入れたい部分は`block 名前`で囲っておく.  
+例として, `common/_layouts.pug`を基に, `first.pug`と`second.pug`という２つのファイルを作成する.
 
-例として, `_layouts.pug`を基に, `first.pug`と`second.pug`という２つのファイルを作成する.
-
-first.pug
-
+> Pug: first.pug
 ```
-extends _layouts.pug
-
+extends common/_layouts.pug
 block title
   title １ページ目
 block content
   h1 これは１ページ目です
 ```
 
-second.pug
 
+> Pug: second.pug
 ```
-extends _layouts.pug
-
+extends common/_layouts.pug
 block title
   title ２ページ目
 block content
   h1 これは２ページ目です
+```
+
+これをHTMLに変換すると以下のようになる.
+
+> HTML: first.html
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>１ページ目</title>
+  </head>
+  <body>
+    <h1>これは１ページ目です</h1>
+  </body>
+</html>
+```
+
+> HTML: second.html
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>２ページ目</title>
+  </head>
+  <body>
+    <h1>これは２ページ目です</h1>
+  </body>
+</html>
 ```
