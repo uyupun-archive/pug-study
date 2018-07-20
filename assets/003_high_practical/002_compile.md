@@ -3,15 +3,15 @@
 Pugをコンパイルするために, `gulpfile.js` を作成する.  
 `gulpfile.js` は様々な作業をまとめて処理するためのファイルである.
 
-まず, `touch` コマンドでファイルを作成し, ファイル内にコードを記入する.
+まず, `touch` コマンドでファイルを作成し, ファイル内にコードを記述する.
 
 ```bash
 $ touch gulpfile.js
 $ vim gulpfile.js
 ```
-`vim` は `vi` から派生し, 発展した高機能なテキストエディタだ.  
-`vim` は `i` を入力することで挿入モードになり, 文字を打つことができる.  
-また, `esc` を入力することでコマンドモード（初期状態）に戻り, `:wq` または `ZZ` で上書き保存し, `vim` を終了することができる.  
+Vim は vi から派生し, 発展した高機能なテキストエディタだ.  
+Vim は `i` キーを入力することで挿入モードになり, 文字を打つことができる.  
+また, `esc` キーを入力することでコマンドモード（初期状態）に戻り, `:wq` または `ZZ` で上書き保存し, im を終了することができる.  
 
 > gulpfile.js
 >
@@ -33,24 +33,20 @@ $ vim gulpfile.js
 >})
 >```
 
-`!./assets/pug/_*.pug` このコードを記入することで, ファイルの先頭に `_` のあるPugファイルはコンパイルされないようになる.  
+`!./assets/pug/_*.pug` このコードを記述することで, ファイルの先頭に `_` のあるPugファイルはコンパイルされないようになる.  
 
 次に, Pugファイルを作成し, コンパイルする. 
 
 ```bash
 $ mkdir -p assets/pug/
-$ cd assets/pug/
-$ touch index.pug
-$ echo h1 hogehoge > index.pug
-$ cd ../../
+$ echo h1 hogehoge > assets/pug/index.pug
 $ gulp pug
 ```
 
 コンパイルされているかどうか, 確認する.
 
 ```bash
-$ cd public
-$ cat index.html
+$ cat public/index.html
 ```
 
 最後に, 自動コンパイルを試す.  
