@@ -4,7 +4,7 @@ Pugではプログラミング言語のように変数を定義することが�
 
 > Pug
 ```
-- var name = "たけし";
+- var name = "たけし"
 p #{name}
 ```
 
@@ -44,7 +44,7 @@ p #{name}
 
 > Pug
 ```
-- val name = "たけし";
+- var name = "たけし"
 ul
   li #{name}
   li #{name}
@@ -54,7 +54,7 @@ ul
 
 > Pug
 ```
-- val name = "たかし";
+- var name = "たかし"
 ul
   li #{name}
   li #{name}
