@@ -1,4 +1,7 @@
 # コンパイル
+Pugはそのままブラウザで動作することはできないため, Pugで記述されたファイルはHTMLにコンパイルする必要がある.  
+そのため, 今回はGulpを使ってPugからHTMLの変換を自動化する.
+
 Gulpで実行したいタスクは, `gulpfile.js`に記述する.  
 以下のコマンドで`gulpfile.js`を作成する
 
@@ -34,7 +37,7 @@ gulp.task('watch', [ 'pug' ], () => {
 
 ```bash
 $ mkdir -p assets/pug/
-$ echo h1 hogehoge > assets/pug/index.pug
+$ echo p ぅゅ... > assets/pug/index.pug
 $ gulp pug
 [15:56:14] Using gulpfile ~/Desktop/pug-test/gulpfile.js
 [15:56:14] Starting 'pug'...
@@ -45,18 +48,19 @@ $ gulp pug
 
 ```bash
 $ cat public/index.html
+<p>ぅゅ...</p>
 ```
 
 最後に, 自動コンパイルを試す.  
-まず, ターミナルを2つ立ち上げ, 2つとも `pug-test` ディレクトリへ移動する.  
+まず, ターミナルを２つ立ち上げ, それぞれ`pug-test`ディレクトリへ移動する.  
 
-```
+```bash
 $ cd pug-test
 ```
 
-片方のターミナルで, 以下のコマンドを実行し, ファイルの変更を監視する.
+片方のターミナルで, 以下のコマンドを実行し, Pugの自動コンパイルをするタスクを実行する.
 
-```
+```bash
 $ gulp watch
 [03:31:18] Using gulpfile ~/Desktop/pug-test/gulpfile.js
 [03:31:18] Starting 'pug'...
@@ -67,13 +71,13 @@ $ gulp watch
 
 もう片方は, Pugファイルを変更する.
 
-```
-$ echo h1 piyopiyo > assets/pug/index.pug
+```bash
+$ echo h1 ぷんぽぷんぽ > assets/pug/index.pug
 ```
 
-`watch` している方のターミナルを確認すると, 自動でコンパイルされたことが分かる.
+Pugの自動コンパイルを実行している方のターミナルを確認すると, 自動でコンパイルされていることが分かる.
 
-```
+```bash
 $ gulp watch
 [03:31:18] Using gulpfile ~/Desktop/pug-test/gulpfile.js
 [03:31:18] Starting 'pug'...
@@ -82,4 +86,9 @@ $ gulp watch
 [03:31:18] Finished 'watch' after 7.62 ms
 [03:31:34] Starting 'pug'...
 [03:31:34] Finished 'pug' after 1.83 ms
+```
+
+```bash
+$ cat public/index.html
+<p>ぷんぽぷんぽ</p>
 ```
