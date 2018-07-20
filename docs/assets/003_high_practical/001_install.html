@@ -384,8 +384,39 @@ v8.9.1
 <pre><code class="lang-bash">$ mkdir pug-test
 $ <span class="hljs-built_in">cd</span> pug-test
 </code></pre>
-<p>&#x6B21;&#x306B;, <code>package.json</code>&#x3092;&#x751F;&#x6210;&#x3059;&#x308B;.<br><code>package.json</code>&#x306F;npm&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x305F;&#x3044;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306A;&#x3069;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x3066;&#x304A;&#x304F;&#x305F;&#x3081;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x3042;&#x308B;.<br><code>package.json</code>&#x306E;&#x96DB;&#x5F62;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x751F;&#x6210;&#x3067;&#x304D;&#x308B;.</p>
+<p>&#x6B21;&#x306B;, <code>package.json</code>&#x3092;&#x751F;&#x6210;&#x3059;&#x308B;.<br><code>package.json</code>&#x306F;npm&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x305F;&#x3044;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306A;&#x3069;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x3066;&#x304A;&#x304F;&#x305F;&#x3081;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x3042;&#x308B;.<br><code>package.json</code>&#x306E;&#x96DB;&#x5F62;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x751F;&#x6210;&#x3067;&#x304D;&#x308B;.<br><code>npm init</code>&#x6642;&#x306B;&#x8272;&#x3005;&#x3068;&#x805E;&#x304B;&#x308C;&#x308B;&#x304C;, &#x4ECA;&#x56DE;&#x306F;&#x5168;&#x3066;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x3067;&#x826F;&#x3044;.</p>
 <pre><code class="lang-bash">$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm <span class="hljs-built_in">help</span> json` <span class="hljs-keyword">for</span> definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency <span class="hljs-keyword">in</span> the package.json file.
+
+Press ^C at any time to quit.
+package name: (<span class="hljs-built_in">test</span>)
+version: (1.0.0)
+description:
+entry point: (index.js)
+<span class="hljs-built_in">test</span> <span class="hljs-built_in">command</span>:
+git repository:
+keywords:
+license: (ISC)
+About to write to /Users/tyokinuhata/Desktop/pug-test/package.json:
+
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;pug-test&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;Kazukichi &lt;kazukiti201@gmail.com&gt; (https://tyokinuhata.github.io/portfolio/)&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>
+}
 </code></pre>
 <p>&#x6B21;&#x306B;, Gulp&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;.<br>Gulp&#x306F;, Node.js&#x3067;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x30BF;&#x30B9;&#x30AF;&#x30E9;&#x30F3;&#x30CA;&#x30FC;&#x3067;&#x3042;&#x308B;.<br>&#x8981;&#x3059;&#x308B;&#x306B;, &#x9762;&#x5012;&#x306A;&#x4F5C;&#x696D;&#x3092;&#x81EA;&#x52D5;&#x5316;&#x3067;&#x304D;&#x308B;&#x30C4;&#x30FC;&#x30EB;&#x3067;&#x3042;&#x308B;.</p>
 <pre><code class="lang-bash">$ npm install gulp --save-dev
@@ -432,7 +463,7 @@ $ <span class="hljs-built_in">cd</span> pug-test
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"インストール","level":"1.17","depth":1,"next":{"title":"コンパイル","level":"1.18","depth":1,"path":"assets/003_high_practical/002_compile.md","ref":"assets/003_high_practical/002_compile.md","articles":[]},"previous":{"title":"[実践編]","level":"1.16","depth":1,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"assets/003_high_practical/001_install.md","mtime":"2018-07-20T05:46:34.555Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-20T08:44:07.116Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"インストール","level":"1.17","depth":1,"next":{"title":"コンパイル","level":"1.18","depth":1,"path":"assets/003_high_practical/002_compile.md","ref":"assets/003_high_practical/002_compile.md","articles":[]},"previous":{"title":"[実践編]","level":"1.16","depth":1,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"assets/003_high_practical/001_install.md","mtime":"2018-07-20T09:02:42.576Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-20T09:05:34.115Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

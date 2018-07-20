@@ -33,10 +33,42 @@ $ cd pug-test
 
 次に, `package.json`を生成する.  
 `package.json`はnpmでインストールしたいパッケージなどを記述しておくためのファイルである.  
-`package.json`の雛形は以下のコマンドで生成できる.
+`package.json`の雛形は以下のコマンドで生成できる.  
+`npm init`時に色々と聞かれるが, 今回は全てエンターで良い.
 
 ```bash
 $ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (test)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+license: (ISC)
+About to write to /Users/tyokinuhata/Desktop/pug-test/package.json:
+
+{
+  "name": "pug-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kazukichi <kazukiti201@gmail.com> (https://tyokinuhata.github.io/portfolio/)",
+  "license": "ISC"
+}
 ```
 
 次に, Gulpをインストールする.  
