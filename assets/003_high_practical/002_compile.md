@@ -36,6 +36,9 @@ gulp.task('watch', [ 'pug' ], () => {
 $ mkdir -p assets/pug/
 $ echo h1 hogehoge > assets/pug/index.pug
 $ gulp pug
+[15:56:14] Using gulpfile ~/Desktop/pug-test/gulpfile.js
+[15:56:14] Starting 'pug'...
+[15:56:14] Finished 'pug' after 6.64 ms
 ```
 
 コンパイルされているかどうか, 確認する.
